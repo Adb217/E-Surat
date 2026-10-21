@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+[x-cloak] { display: none !important; }
+
+@layer components {
+    .card { @apply rounded-2xl border border-gray-200 bg-white p-5 shadow-sm; }
+    .lbl  { @apply mb-1.5 block text-xs font-semibold text-gray-600; }
+    .inp  { @apply w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-sm text-gray-800 placeholder-gray-400 outline-none transition focus:border-orange-500 focus:ring-4 focus:ring-orange-100; }
+    .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-40; }
+    .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50; }
+    /* isi surat (editor, pratinjau) */
+.ProseMirror { outline: none; white-space: pre-wrap; word-wrap: break-word; }
+.isi p { margin: 0 0 6px; }
+.isi ul { list-style: disc; padding-left: 22px; margin: 0 0 6px; }
+.isi ol { list-style: decimal; padding-left: 22px; margin: 0 0 6px; }
+.isi table { border-collapse: collapse; width: 100%; margin: 6px 0; }
+.isi th, .isi td { border: 1px solid #6b7280; padding: 3px 7px; vertical-align: top; text-align: left; }
+.isi th { background: #f3f4f6; font-weight: 700; }
+.isi .selectedCell { background: #ffedd5; }
+}
